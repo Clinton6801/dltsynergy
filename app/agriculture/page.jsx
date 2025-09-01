@@ -54,7 +54,7 @@ const App = () => {
 
       <main className="pt-20">
         {/* Hero Section */}
-        <header className="relative w-full h-[50vh] md:h-[70vh] bg-cover bg-center flex items-center justify-center p-6" style={{ backgroundImage: 'url("https://placehold.co/1920x1080/1F2937/ffffff?text=Agriculture")', backgroundBlendMode: 'multiply', backgroundColor: 'rgba(0,0,0,0.5)' }}>
+        <header className="relative w-full h-[50vh] md:h-[70vh] bg-cover bg-center flex items-center justify-center p-6" style={{ backgroundImage: 'url("agr-bg.png")', backgroundBlendMode: 'multiply', backgroundColor: 'rgba(0,0,0,0.5)' }}>
           <div className="text-center text-white space-y-4">
             <h1 className="text-4xl md:text-7xl font-extrabold leading-tight">Cultivating Growth, Harvesting Innovation</h1>
             <p className="text-base md:text-xl font-light max-w-3xl mx-auto">We are pioneering a new era of agriculture through technology, sustainability, and strategic agribusiness solutions.</p>
@@ -79,7 +79,7 @@ const App = () => {
             {/* Sustainable Farming & Modern Agribusiness */}
             <div className="flex flex-col md:flex-row items-center mb-20 md:space-x-12">
               <div className="md:w-1/2 mb-8 md:mb-0">
-                <img src="https://placehold.co/800x600/1F2937/ffffff?text=Sustainable+Farming" alt="Sustainable Farming" className="rounded-xl shadow-xl w-full" />
+                <img src="./agr-mod.jpeg" alt="Sustainable Farming" className="rounded-xl shadow-xl w-full" />
               </div>
               <div className="md:w-1/2">
                 <h3 className="text-3xl font-bold text-yellow-400 mb-4">Sustainable Farming & Modern Agribusiness</h3>
@@ -92,7 +92,7 @@ const App = () => {
             {/* Supply Chain Management */}
             <div className="flex flex-col md:flex-row-reverse items-center mb-20 md:space-x-reverse md:space-x-12">
               <div className="md:w-1/2 mb-8 md:mb-0">
-                <img src="https://placehold.co/800x600/1F2937/ffffff?text=Supply+Chain" alt="Supply Chain Management" className="rounded-xl shadow-xl w-full" />
+                <img src="./agr-supply.png" alt="Supply Chain Management" className="rounded-xl shadow-xl w-full" />
               </div>
               <div className="md:w-1/2">
                 <h3 className="text-3xl font-bold text-yellow-400 mb-4">Supply Chain Management</h3>
@@ -105,7 +105,7 @@ const App = () => {
             {/* Agribusiness Consulting */}
             <div className="flex flex-col md:flex-row items-center mb-20 md:space-x-12">
               <div className="md:w-1/2 mb-8 md:mb-0">
-                <img src="https://placehold.co/800x600/1F2937/ffffff?text=Agribusiness" alt="Agribusiness Consulting" className="rounded-xl shadow-xl w-full" />
+                <img src="./agr-cons.jpg" alt="Agribusiness Consulting" className="rounded-xl shadow-xl w-full" />
               </div>
               <div className="md:w-1/2">
                 <h3 className="text-3xl font-bold text-yellow-400 mb-4">Agribusiness Consulting</h3>

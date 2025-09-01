@@ -54,7 +54,7 @@ const App = () => {
 
       <main className="pt-20">
         {/* Hero Section */}
-        <header className="relative w-full h-[50vh] md:h-[70vh] bg-cover bg-center flex items-center justify-center p-6" style={{ backgroundImage: 'url("https://placehold.co/1920x1080/1F2937/ffffff?text=Technology")', backgroundBlendMode: 'multiply', backgroundColor: 'rgba(0,0,0,0.5)' }}>
+        <header className="relative w-full h-[50vh] md:h-[70vh] bg-cover bg-center flex items-center justify-center p-6" style={{ backgroundImage: 'url("./tech-bg.png")', backgroundBlendMode: 'multiply', backgroundColor: 'rgba(0,0,0,0.5)' }}>
           <div className="text-center text-white space-y-4">
             <h1 className="text-4xl md:text-7xl font-extrabold leading-tight">Pioneering the Future of Technology</h1>
             <p className="text-base md:text-xl font-light max-w-3xl mx-auto">We are at the forefront of digital innovation, creating solutions that drive efficiency, connectivity, and growth across industries.</p>
@@ -79,7 +79,7 @@ const App = () => {
             {/* Custom Software Development */}
             <div className="flex flex-col md:flex-row items-center mb-20 md:space-x-12">
               <div className="md:w-1/2 mb-8 md:mb-0">
-                <img src="https://placehold.co/800x600/1F2937/ffffff?text=Software+Development" alt="Custom Software Development" className="rounded-xl shadow-xl w-full" />
+                <img src="./tech-csd.jpeg" alt="Custom Software Development" className="rounded-xl shadow-xl w-full" />
               </div>
               <div className="md:w-1/2">
                 <h3 className="text-3xl font-bold text-yellow-400 mb-4">Custom Software Development</h3>
@@ -92,7 +92,7 @@ const App = () => {
             {/* IT Infrastructure & Cloud Services */}
             <div className="flex flex-col md:flex-row-reverse items-center mb-20 md:space-x-reverse md:space-x-12">
               <div className="md:w-1/2 mb-8 md:mb-0">
-                <img src="https://placehold.co/800x600/1F2937/ffffff?text=Cloud+Services" alt="IT Infrastructure & Cloud Services" className="rounded-xl shadow-xl w-full" />
+                <img src="./tech-it.png" alt="IT Infrastructure & Cloud Services" className="rounded-xl shadow-xl w-full" />
               </div>
               <div className="md:w-1/2">
                 <h3 className="text-3xl font-bold text-yellow-400 mb-4">IT Infrastructure & Cloud Services</h3>
@@ -105,7 +105,7 @@ const App = () => {
             {/* Cybersecurity and Data Analytics */}
             <div className="flex flex-col md:flex-row items-center mb-20 md:space-x-12">
               <div className="md:w-1/2 mb-8 md:mb-0">
-                <img src="https://placehold.co/800x600/1F2937/ffffff?text=Cybersecurity" alt="Cybersecurity and Data Analytics" className="rounded-xl shadow-xl w-full" />
+                <img src="./tech-sec.jpeg" alt="Cybersecurity and Data Analytics" className="rounded-xl shadow-xl w-full" />
               </div>
               <div className="md:w-1/2">
                 <h3 className="text-3xl font-bold text-yellow-400 mb-4">Cybersecurity and Data Analytics</h3>

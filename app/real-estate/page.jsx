@@ -53,7 +53,7 @@ const Realestate = () => {
 
       <main className="pt-20">
         {/* Hero Section */}
-        <header className="relative w-full h-[50vh] md:h-[70vh] bg-cover bg-center flex items-center justify-center p-6" style={{ backgroundImage: 'url("https://placehold.co/1920x1080/1F2937/ffffff?text=Real+Estate")', backgroundBlendMode: 'multiply', backgroundColor: 'rgba(0,0,0,0.5)' }}>
+        <header className="relative w-full h-[50vh] md:h-[70vh] bg-cover bg-center flex items-center justify-center p-6" style={{ backgroundImage: 'url("./re-bg.png")', backgroundBlendMode: 'multiply', backgroundColor: 'rgba(0,0,0,0.5)' }}>
           <div className="text-center text-white space-y-4">
             <h1 className="text-4xl md:text-7xl font-extrabold leading-tight">Innovative Real Estate Solutions</h1>
             <p className="text-base md:text-xl font-light max-w-3xl mx-auto">From residential properties to commercial developments, we're building the future of real estate with integrity and vision.</p>
@@ -78,7 +78,7 @@ const Realestate = () => {
             {/* Residential Development */}
             <div className="flex flex-col md:flex-row items-center mb-20 md:space-x-12">
               <div className="md:w-1/2 mb-8 md:mb-0">
-                <img src="https://placehold.co/800x600/1F2937/ffffff?text=Residential" alt="Residential Development" className="rounded-xl shadow-xl w-full" />
+                <img src="./re-residential.jpeg" alt="Residential Development" className="rounded-xl shadow-xl w-full" />
               </div>
               <div className="md:w-1/2">
                 <h3 className="text-3xl font-bold text-yellow-400 mb-4">Residential Development</h3>
@@ -91,7 +91,7 @@ const Realestate = () => {
             {/* Commercial Properties */}
             <div className="flex flex-col md:flex-row-reverse items-center mb-20 md:space-x-reverse md:space-x-12">
               <div className="md:w-1/2 mb-8 md:mb-0">
-                <img src="https://placehold.co/800x600/1F2937/ffffff?text=Commercial" alt="Commercial Properties" className="rounded-xl shadow-xl w-full" />
+                <img src="./re-commercial.jpeg" alt="Commercial Properties" className="rounded-xl shadow-xl w-full" />
               </div>
               <div className="md:w-1/2">
                 <h3 className="text-3xl font-bold text-yellow-400 mb-4">Commercial Properties</h3>
@@ -104,7 +104,7 @@ const Realestate = () => {
             {/* Land Development */}
             <div className="flex flex-col md:flex-row items-center mb-20 md:space-x-12">
               <div className="md:w-1/2 mb-8 md:mb-0">
-                <img src="https://placehold.co/800x600/1F2937/ffffff?text=Land+Development" alt="Land Development" className="rounded-xl shadow-xl w-full" />
+                <img src="./re-land.jpeg" alt="Land Development" className="rounded-xl shadow-xl w-full" />
               </div>
               <div className="md:w-1/2">
                 <h3 className="text-3xl font-bold text-yellow-400 mb-4">Land Development</h3>
