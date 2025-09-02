@@ -78,7 +78,7 @@ const Realestate = () => {
             {/* Residential Development */}
             <div className="flex flex-col md:flex-row items-center mb-20 md:space-x-12">
               <div className="md:w-1/2 mb-8 md:mb-0">
-                <img src="./re-residential.jpeg" alt="Residential Development" className="rounded-xl shadow-xl w-full" />
+                <img src="./resi.jpg" alt="Residential Development" className="rounded-xl shadow-xl w-full" />
               </div>
               <div className="md:w-1/2">
                 <h3 className="text-3xl font-bold text-yellow-400 mb-4">Residential Development</h3>
@@ -91,7 +91,7 @@ const Realestate = () => {
             {/* Commercial Properties */}
             <div className="flex flex-col md:flex-row-reverse items-center mb-20 md:space-x-reverse md:space-x-12">
               <div className="md:w-1/2 mb-8 md:mb-0">
-                <img src="./re-commercial.jpeg" alt="Commercial Properties" className="rounded-xl shadow-xl w-full" />
+                <img src="./comm.webp" alt="Commercial Properties" className="rounded-xl shadow-xl w-full" />
               </div>
               <div className="md:w-1/2">
                 <h3 className="text-3xl font-bold text-yellow-400 mb-4">Commercial Properties</h3>
@@ -104,7 +104,7 @@ const Realestate = () => {
             {/* Land Development */}
             <div className="flex flex-col md:flex-row items-center mb-20 md:space-x-12">
               <div className="md:w-1/2 mb-8 md:mb-0">
-                <img src="./re-land.jpeg" alt="Land Development" className="rounded-xl shadow-xl w-full" />
+                <img src="./landdev.webp" alt="Land Development" className="rounded-xl shadow-xl w-full" />
               </div>
               <div className="md:w-1/2">
                 <h3 className="text-3xl font-bold text-yellow-400 mb-4">Land Development</h3>
