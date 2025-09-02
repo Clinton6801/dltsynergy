@@ -72,6 +72,17 @@ const App = () => {
             </div>
           </div>
         </section>
+        {/* Our Vission Section */}
+        <section className="py-16 md:py-24 bg-gray-900">
+          <div className="container mx-auto px-6">
+            <div className="text-center">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Our Vision</h2>
+              <p className="text-lg text-gray-300 max-w-4xl mx-auto">
+                At DLTSynergy, Our vision is to be the leading force in global technological advancement, creating a future where our solutions empower industries and communities to thrive sustainably.
+              </p>
+            </div>
+          </div>
+        </section>
 
         {/* CEO Section */}
         <section className="py-16 md:py-24">

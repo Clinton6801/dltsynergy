@@ -53,7 +53,7 @@ const App = () => {
 
       <main className="pt-20">
         {/* Hero Section */}
-        <header className="relative w-full h-[50vh] md:h-[80vh] bg-cover bg-center flex items-center justify-center p-6" style={{ backgroundImage: 'url("./hp-pg.png")', backgroundBlendMode: 'multiply', backgroundColor: 'rgba(0,0,0,0.5)' }}>
+        <header className="relative w-full h-[50vh] md:h-[80vh] bg-cover bg-center flex items-center justify-center p-6" style={{ backgroundImage: 'url("./hpp.jpeg")', backgroundBlendMode: 'multiply', backgroundColor: 'rgba(0,0,0,0.5)' }}>
           <div className="text-center text-white space-y-4">
             <h1 className="text-4xl md:text-7xl font-extrabold leading-tight">Driving Growth Across Key Industries</h1>
             <p className="text-base md:text-xl font-light max-w-3xl mx-auto">DLTSynergy is a multi-faceted organization dedicated to innovation and excellence in Real Estate, Education, Technology, and Agriculture. We build the future, one sector at a time.</p>

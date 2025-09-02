@@ -53,7 +53,7 @@ const Realestate = () => {
 
       <main className="pt-20">
         {/* Hero Section */}
-        <header className="relative w-full h-[50vh] md:h-[70vh] bg-cover bg-center flex items-center justify-center p-6" style={{ backgroundImage: 'url("./re-bg.png")', backgroundBlendMode: 'multiply', backgroundColor: 'rgba(0,0,0,0.5)' }}>
+        <header className="relative w-full h-[50vh] md:h-[70vh] bg-cover bg-center flex items-center justify-center p-6" style={{ backgroundImage: 'url("./ree.jpeg")', backgroundBlendMode: 'multiply', backgroundColor: 'rgba(0,0,0,0.5)' }}>
           <div className="text-center text-white space-y-4">
             <h1 className="text-4xl md:text-7xl font-extrabold leading-tight">Innovative Real Estate Solutions</h1>
             <p className="text-base md:text-xl font-light max-w-3xl mx-auto">From residential properties to commercial developments, we're building the future of real estate with integrity and vision.</p>
