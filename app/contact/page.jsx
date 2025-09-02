@@ -4,6 +4,66 @@ import React, { useState } from 'react';
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
+  const [submissionStatus, setSubmissionStatus] = useState(null); // 'success', 'error', 'submitting'
+
+  // Replace this with your unique Formspree endpoint.
+  // You can find this URL after creating a new form on the Formspree website.
+  const FORMSPREE_ENDPOINT = "https://formspree.io/f/movnlogq";
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevData => ({ ...prevData, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSubmissionStatus('submitting');
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmissionStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' }); // Clear form
+      } else {
+        setSubmissionStatus('error');
+      }
+    } catch (error) {
+      setSubmissionStatus('error');
+    }
+  };
+
+  const renderStatusMessage = () => {
+    if (submissionStatus === 'success') {
+      return (
+        <div className="mt-8 p-4 bg-green-500 rounded-lg text-white font-bold text-center">
+          Thank you for your message! We will get back to you shortly.
+        </div>
+      );
+    }
+    if (submissionStatus === 'error') {
+      return (
+        <div className="mt-8 p-4 bg-red-500 rounded-lg text-white font-bold text-center">
+          Something went wrong. Please try again later.
+        </div>
+      );
+    }
+    if (submissionStatus === 'submitting') {
+      return (
+        <div className="mt-8 p-4 bg-blue-500 rounded-lg text-white font-bold text-center">
+          Sending...
+        </div>
+      );
+    }
+    return null;
+  };
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -66,13 +126,17 @@ const App = () => {
           <div className="container mx-auto px-6">
             <div className="max-w-3xl mx-auto bg-gray-800 p-8 md:p-12 rounded-xl shadow-2xl">
               <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-8">Contact Form</h2>
-              <form>
+              {/* Formspree form integration */}
+              <form onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
                   <div>
                     <label htmlFor="name" className="block text-gray-300 font-medium mb-2">Name</label>
                     <input
                       type="text"
                       id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
                       className="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-blue-500 focus:outline-none text-white"
                       placeholder="Your Name"
                     />
@@ -82,6 +146,9 @@ const App = () => {
                     <input
                       type="email"
                       id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
                       className="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-blue-500 focus:outline-none text-white"
                       placeholder="Your Email"
                     />
@@ -92,6 +159,9 @@ const App = () => {
                   <input
                     type="text"
                     id="subject"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
                     className="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-blue-500 focus:outline-none text-white"
                     placeholder="Subject of your message"
                   />
@@ -100,6 +170,9 @@ const App = () => {
                   <label htmlFor="message" className="block text-gray-300 font-medium mb-2">Message</label>
                   <textarea
                     id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     rows="6"
                     className="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-blue-500 focus:outline-none text-white"
                     placeholder="Your message"
@@ -108,11 +181,13 @@ const App = () => {
                 <div className="text-center">
                   <button
                     type="submit"
-                    className="w-full md:w-auto px-8 py-3 rounded-lg bg-blue-500 hover:bg-blue-600 transition-colors duration-300 font-bold text-white shadow-lg"
+                    disabled={submissionStatus === 'submitting'}
+                    className="w-full md:w-auto px-8 py-3 rounded-lg bg-blue-500 hover:bg-blue-600 transition-colors duration-300 font-bold text-white shadow-lg disabled:opacity-50"
                   >
                     Send Message
                   </button>
                 </div>
+                {renderStatusMessage()}
               </form>
             </div>
           </div>
