@@ -79,12 +79,12 @@ const App = () => {
             <div className="flex flex-col md:flex-row items-center justify-center md:space-x-12">
               <div className="md:w-1/3 mb-8 md:mb-0 text-center">
                 <img src="https://placehold.co/400x400/1F2937/ffffff?text=CEO+Photo" alt="CEO's Photo" className="rounded-full shadow-xl w-64 h-64 mx-auto object-cover" />
-                <h3 className="text-3xl font-bold text-yellow-400 mt-6">John Smith</h3>
+                <h3 className="text-3xl font-bold text-yellow-400 mt-6">AMB. GREGORY ITAH (PhD)</h3>
                 <p className="text-lg text-gray-400">Chief Executive Officer</p>
               </div>
               <div className="md:w-2/3 text-center md:text-left">
                 <p className="text-gray-300 text-lg mb-4">
-                  John Smith is the visionary founder and CEO of DLTSynergy. With over two decades of experience in technology and business development, John has successfully led numerous ventures to market leadership. His philosophy centers on the power of innovation, integrity, and collaboration to solve complex challenges. He is a recognized leader in the tech and real estate sectors, with a passion for building teams that are dedicated to excellence and ethical practices.
+                  Amb. Gregory is the visionary founder and CEO of DLTSynergy. With over two decades of experience in technology and business development, He has successfully led numerous ventures to market leadership. His philosophy centers on the power of innovation, integrity, and collaboration to solve complex challenges. He is a recognized leader in the tech and real estate sectors, with a passion for building teams that are dedicated to excellence and ethical practices.
                 </p>
                 <p className="text-gray-300 text-lg">
                   Under his leadership, DLTSynergy has grown into a multi-faceted organization, driven by a commitment to sustainable growth and a positive impact on society.
