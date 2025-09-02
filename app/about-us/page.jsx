@@ -78,7 +78,7 @@ const App = () => {
           <div className="container mx-auto px-6">
             <div className="flex flex-col md:flex-row items-center justify-center md:space-x-12">
               <div className="md:w-1/3 mb-8 md:mb-0 text-center">
-                <img src="https://placehold.co/400x400/1F2937/ffffff?text=CEO+Photo" alt="CEO's Photo" className="rounded-full shadow-xl w-64 h-64 mx-auto object-cover" />
+                <img src="./gregitah.jpg" alt="CEO's Photo" className="rounded-full shadow-xl w-64 h-64 mx-auto object-cover" />
                 <h3 className="text-3xl font-bold text-yellow-400 mt-6">AMB. GREGORY ITAH (PhD)</h3>
                 <p className="text-lg text-gray-400">Chief Executive Officer</p>
               </div>
