@@ -11,6 +11,12 @@ const App = () => {
   // You can find this URL after creating a new form on the Formspree website.
   const FORMSPREE_ENDPOINT = "https://formspree.io/f/movnlogq";
 
+  // Check if all form fields are filled
+  const isFormValid = formData.name.trim() !== '' &&
+                      formData.email.trim() !== '' &&
+                      formData.subject.trim() !== '' &&
+                      formData.message.trim() !== '';
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevData => ({ ...prevData, [name]: value }));
@@ -30,8 +36,11 @@ const App = () => {
       });
 
       if (response.ok) {
+        // Set submission status to success and reload the page after 10 seconds
         setSubmissionStatus('success');
-        setFormData({ name: '', email: '', subject: '', message: '' }); // Clear form
+        setTimeout(() => {
+          window.location.reload();
+        }, 10000); // 10000 milliseconds = 10 seconds
       } else {
         setSubmissionStatus('error');
       }
@@ -139,6 +148,7 @@ const App = () => {
                       onChange={handleChange}
                       className="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-blue-500 focus:outline-none text-white"
                       placeholder="Your Name"
+                      required
                     />
                   </div>
                   <div>
@@ -151,6 +161,7 @@ const App = () => {
                       onChange={handleChange}
                       className="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-blue-500 focus:outline-none text-white"
                       placeholder="Your Email"
+                      required
                     />
                   </div>
                 </div>
@@ -163,45 +174,47 @@ const App = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-blue-500 focus:outline-none text-white"
-                    placeholder="Subject of your message"
-                  />
-                </div>
-                <div className="mb-6">
-                  <label htmlFor="message" className="block text-gray-300 font-medium mb-2">Message</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows="6"
-                    className="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-blue-500 focus:outline-none text-white"
-                    placeholder="Your message"
-                  ></textarea>
-                </div>
-                <div className="text-center">
-                  <button
-                    type="submit"
-                    disabled={submissionStatus === 'submitting'}
-                    className="w-full md:w-auto px-8 py-3 rounded-lg bg-blue-500 hover:bg-blue-600 transition-colors duration-300 font-bold text-white shadow-lg disabled:opacity-50"
-                  >
-                    Send Message
-                  </button>
-                </div>
-                {renderStatusMessage()}
-              </form>
+                      placeholder="Subject of your message"
+                      required
+                    />
+                  </div>
+                  <div className="mb-6">
+                    <label htmlFor="message" className="block text-gray-300 font-medium mb-2">Message</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      rows="6"
+                      className="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-blue-500 focus:outline-none text-white"
+                      placeholder="Your message"
+                      required
+                    ></textarea>
+                  </div>
+                  <div className="text-center">
+                    <button
+                      type="submit"
+                      disabled={!isFormValid || submissionStatus === 'submitting'}
+                      className="w-full md:w-auto px-8 py-3 rounded-lg bg-blue-500 hover:bg-blue-600 transition-colors duration-300 font-bold text-white shadow-lg disabled:opacity-50"
+                    >
+                      Send Message
+                    </button>
+                  </div>
+                  {renderStatusMessage()}
+                </form>
+              </div>
             </div>
+          </section>
+        </main>
+  
+        {/* Footer */}
+        <footer className="bg-gray-800 text-gray-300 py-8 md:py-12">
+          <div className="container mx-auto px-6 text-center">
+            <p>&copy; 2024 DLTSynergy. All rights reserved.</p>
           </div>
-        </section>
-      </main>
-
-      {/* Footer */}
-      <footer className="bg-gray-800 text-gray-300 py-8 md:py-12">
-        <div className="container mx-auto px-6 text-center">
-          <p>&copy; 2024 DLTSynergy. All rights reserved.</p>
-        </div>
-      </footer>
-    </div>
-  );
-};
-
-export default App;
+        </footer>
+      </div>
+    );
+  };
+  
+  export default App;
